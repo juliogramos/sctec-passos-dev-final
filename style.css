@@ -1,3 +1,26 @@
+/* Variáveis CSS */
+:root {
+    /* Paleta de cores */
+    /* Obtida de: https://www.iamsajid.com/ui-colors/ */
+    --bg-dark: hsl(211 86% 91%);
+    --bg: hsl(211 100% 96%);
+    --bg-light: hsl(211 100% 100%);
+    --text: hsl(220 100% 7%);
+    --text-muted: hsl(210 46% 29%);
+    --highlight: hsl(211 100% 100%);
+    --border: hsl(211 30% 52%);
+    --border-muted: hsl(211 41% 64%);
+    --primary: hsl(208 74% 28%);
+    --secondary: hsl(38 100% 17%);
+    --danger: hsl(9 28% 41%);
+    --warning: hsl(51 36% 31%);
+    --success: hsl(149 30% 34%);
+    --info: hsl(217 30% 42%);
+
+    /* Medidas padrão */
+    --border-radius: 16px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +28,126 @@
 }
 
 body {
+    background-color: var(--bg);
+
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.5;
+    max-width: 65ch;
+    color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    list-style-type: none;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    padding: 8px 32px;
+    border-radius: calc(var(--border-radius) * 2);
+}
+
+header > nav > ul > li > a {
+    display: inline-block;
+    padding: 8px;
+    color: var(--primary);
+}
+
+header > nav > ul > li > a:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease-in-out;
+    color: var(--border-muted);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.logotipo {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--primary);
+    text-shadow:
+        var(--border) 2px 2px 0px,
+        var(--border) -2px 2px 0px,
+        var(--highlight) -2px -2px 0px,
+        var(--border) 2px -2px 0px;
+}
+
+.hero {
+    background-color: var(--bg-light);
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: var(--border-radius);
+    position: relative;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+    border: 1px solid var(--border-muted);
+    border-top: 1px solid var(--highlight);
+}
+
+.hero > p {
+    line-height: 2.5;
+    max-width: 55ch;
+}
+
+.hero > * {
+    z-index: 2;
+}
+
+.img-relativa {
+    position: absolute;
+    top: -16px;
+    right: -50px;
+    z-index: 1;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.24));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.24));
+}
+
+.cta {
+    display: block;
+    background-color: var(--primary);
+    padding: 16px 64px;
+    border-radius: var(--border-radius);
+    width: fit-content;
+    color: var(--highlight);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.cta:hover {
+    background-color: var(--border);
+    color: var(--highlight);
+    transition: all 0.3s ease-in-out;
 }
