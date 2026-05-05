@@ -55,7 +55,20 @@ Tema do pet shop: Digimon
     - Cartões de memória
     - Itens de treino
 
+#### Acessibilidade
+
+[Fonte](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
+| Elemento | Atributo | Valor |
+| --- | --- | --- |
+| body | font-size (body) | 18px |
+| p | line-height | 1.5 |
+| p | max-width | 65ch |
+| .img-decorativa | aria-hidden | true
+
 ### 3. Coleta de recursos
+
+- Fonte Montserrat
+- Imagens do mascote
 
 ### 4. Codificação
 
