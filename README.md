@@ -74,6 +74,8 @@ Tema do pet shop: Digimon
 
 #### 4.1 HTML
 
+A estrutura HTML básica foi expandida com os campos definidos no rascunho, se utilizando de Lorem Ipsum para preencher os textos ainda não definidos.
+
 #### 4.2 CSS
 
 #### 4.3 Javascript

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>DigiPet</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,8 +16,15 @@
         <div class="container">
             <!-- Cabeçalho -->
             <header>
-                <div class="logotipo"></div>
-                <nav></nav>
+                <div class="logotipo">DigiPet</div>
+                <nav>
+                    <ul>
+                        <li><a href="#destaque">Inicio</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
             </header>
 
             <!-- Conteúdo -->
@@ -25,26 +32,195 @@
                 <!-- Seção Destaque -->
                 <section id="destaque">
                     <h1>DigiPet - Pet Shop</h1>
-                    <p>Testando as configurações de fonte</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Laudantium, placeat quibusdam nihil odio optio minima.
+                        Doloremque eos odio ipsum necessitatibus, id ab sed
+                        veniam iure maiores fugiat quas, beatae ad!
+                    </p>
                     <button>CTA</button>
+                    <img src="imagens/hakase.webp" aria-hidden="true" />
                 </section>
 
                 <!-- Seção Sobre -->
                 <section id="sobre">
                     <h2>Sobre Nós</h2>
-                    <div class="flex"></div>
+                    <div class="flex column">
+                        <div class="flex row">
+                            <div>
+                                <h3>Quem Somos</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Debitis quae eos omnis
+                                    ullam exercitationem. Expedita culpa nemo
+                                    nam explicabo et animi impedit aliquid, ut
+                                    quaerat voluptatibus. Nobis, sint
+                                    consequuntur? Animi!
+                                </p>
+                            </div>
+                            <img src="" alt="Uma foto do time da DigiPet" />
+                        </div>
+                        <div class="flex row reverse">
+                            <div>
+                                <h3>Nosso Espaço</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Debitis quae eos omnis
+                                    ullam exercitationem. Expedita culpa nemo
+                                    nam explicabo et animi impedit aliquid, ut
+                                    quaerat voluptatibus. Nobis, sint
+                                    consequuntur? Animi!
+                                </p>
+                            </div>
+                            <img src="" alt="Uma foto do espaço da DigiPet" />
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Seção Serviços -->
                 <section id="servicos">
                     <h2>Serviços</h2>
-                    <div class="cards-container"></div>
+                    <div class="cards-container">
+                        <div class="card">
+                            <img src="" alt="" />
+                            <h3>Título card.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Nobis quam reprehenderit iusto
+                                quae impedit odit sunt repellendus eum ab
+                                consequatur.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="" alt="" />
+                            <h3>Título card.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Nobis quam reprehenderit iusto
+                                quae impedit odit sunt repellendus eum ab
+                                consequatur.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="" alt="" />
+                            <h3>Título card.</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Nobis quam reprehenderit iusto
+                                quae impedit odit sunt repellendus eum ab
+                                consequatur.
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Seção Contato -->
                 <section id="contato">
                     <h2>Contato</h2>
-                    <form></form>
+                    <form>
+                        <h3>Sobre Você</h3>
+                        <label for="dono-nome">Nome: </label>
+                        <input type="text" name="dono-nome" id="dono-nome" />
+                        <br />
+
+                        <label for="dono-email">Email: </label>
+                        <input type="email" name="dono-email" id="dono-email" />
+                        <br />
+
+                        <h3>Seu Digimon</h3>
+                        <label for="digimon-nome">Nome: </label>
+                        <input
+                            type="text"
+                            name="digimon-nome"
+                            id="digimon-nome"
+                        />
+                        <br />
+
+                        <label for="digimon-nivel">Nível: </label>
+                        <select name="digimon-nivel" id="digimon-nivel">
+                            <option value="bebe">Bebê</option>
+                            <option value="crianca">Criança</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="perfeito">Perfeito</option>
+                            <option value="final">Final</option>
+                        </select>
+                        <br />
+
+                        <label for="digimon-tipo">Tipo: </label>
+                        <select name="digimon-tipo" id="digimon-tipo">
+                            <option value="dado">Dado</option>
+                            <option value="vacina">Vacina</option>
+                            <option value="virus">Vírus</option>
+                            <option value="livre">Livre</option>
+                        </select>
+                        <br />
+
+                        <fieldset>
+                            <legend>Possui armadura?</legend>
+                            <input
+                                type="radio"
+                                name="digimon-armadura"
+                                id="digimon-armadura-sim"
+                                value="sim"
+                            />
+                            <label for="digimon-armadura-sim">Sim</label>
+
+                            <input
+                                type="radio"
+                                name="digimon-armadura"
+                                id="digimon-armadura-nao"
+                                value="nao"
+                            />
+                            <label for="digimon-armadura-nao">Não</label>
+                        </fieldset>
+
+                        <h3>Estadia</h3>
+                        <label for="estadia-dias">Quantos dias? </label>
+                        <input
+                            type="number"
+                            name="estadia-dias"
+                            id="estadia-dias"
+                            min="1"
+                            max="7"
+                        />
+                        <br />
+
+                        <fieldset>
+                            <legend>
+                                Deseja que seu digimon batalhe com outros
+                                clientes?
+                            </legend>
+                            <input
+                                type="radio"
+                                name="estadia-batalhar"
+                                id="estadia-batalhar-sim"
+                                value="sim"
+                            />
+                            <label for="estadia-batalhar-sim">Sim</label>
+
+                            <input
+                                type="radio"
+                                name="estadia-batalhar"
+                                id="estadia-batalhar-nao"
+                                value="nao"
+                            />
+                            <label for="estadia-batalhar-nao">Não</label>
+
+                            <div>
+                                <input
+                                    type="checkbox"
+                                    name="estadia-batalhar-consentimento"
+                                    id="estadia-batalhar-consentimento"
+                                />
+                                <label for="estadia-batalhar-consentimento"
+                                    >Estou ciente e me responsabilizo pelos
+                                    riscos</label
+                                >
+                            </div>
+                        </fieldset>
+                    </form>
                 </section>
             </main>
 
