@@ -20,6 +20,40 @@ document
     .getElementById("estadia-dias")
     .addEventListener("blur", (event) => checkInvalidStayDays());
 
+// Colocando event listener nos botões rádio para checar se deve exibir consentimento
+document
+    .getElementById("estadia-batalhar-sim")
+    .addEventListener("change", (event) => displayConsent(true));
+
+document
+    .getElementById("estadia-batalhar-nao")
+    .addEventListener("change", (event) => displayConsent(false));
+
+function displayConsent(shouldDisplay) {
+    const consentContainer = document.getElementById("consentimento-container");
+    const consentCheck = document.getElementById(
+        "estadia-batalhar-consentimento",
+    );
+
+    if (shouldDisplay) {
+        console.log("s");
+        consentContainer.removeAttribute("hidden");
+        consentCheck.removeAttribute("disabled");
+    } else {
+        console.log("n");
+        consentContainer.setAttribute("hidden", true);
+        consentCheck.setAttribute("disabled", true);
+    }
+
+    console.log("whuh");
+}
+
+// Caso a página for recarregada e o "sim batalhar" esteja selecionado, o consentimento não vai aparecer
+// Isso faz essa checagem e mostra ele corretamente
+if (document.getElementById("estadia-batalhar-sim").checked)
+    displayConsent(true);
+
+// Configurando submissão de formulário
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -33,6 +67,14 @@ form.addEventListener("submit", (event) => {
     // Checa se as restrições de tamanho dos campos estão sendo respeitadas
     // Novamente, o HTML já faz isso, mas é bom garantir
     if (checkInvalidLengths(formData)) return;
+
+    // Checa se o email e telefone são válidos através de regex
+    if (checkRegexFails(formData)) return;
+
+    // Checa se o usuário não deu consentimento mas deixou "batalhar" como sim
+    if (checkConsentFailed(formData)) return;
+
+    alert("Formulário válido!");
 });
 
 function checkFormNulls(formData) {
@@ -169,5 +211,42 @@ function checkInvalidStayDays(formData) {
     }
 
     errorDisplay.innerText = "";
+    return false;
+}
+
+function checkRegexFails(formData) {
+    // https://regex101.com/library/SOgUIV
+    const emailPattern = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm;
+
+    // https://regex101.com/library/wZ4uU6
+    // Esse regex checa telefones ao redor do mundo, então
+    // telefones estranhos como "999" são válidos
+    const telephonePattern =
+        /(?:([+]\d{1,4})[-.\s]?)?(?:[(](\d{1,3})[)][-.\s]?)?(\d{1,4})[-.\s]?(\d{1,4})[-.\s]?(\d{1,9})/g;
+
+    if (!emailPattern.test(formData.get("dono-email"))) {
+        alert("Insira um email válido");
+        return true;
+    }
+
+    if (!telephonePattern.test(formData.get("dono-telefone"))) {
+        alert("Insira um telefone válido");
+        return true;
+    }
+
+    return false;
+}
+
+function checkConsentFailed(formData) {
+    console.log(formData);
+    if (
+        formData.get("estadia-batalhar") === "sim" &&
+        !formData.get("estadia-batalhar-consentimento")
+    ) {
+        alert(
+            "Só podemos deixar o seu digimon batalhar com outros clientes se você nos der seu consentimento",
+        );
+        return true;
+    }
     return false;
 }
