@@ -159,7 +159,7 @@
                 <!-- Seção Contato -->
                 <section id="contato">
                     <h2>Contato</h2>
-                    <form>
+                    <form id="contact-form">
                         <div class="form-grid">
                             <div class="form-column">
                                 <h3>Sobre Você</h3>
@@ -169,7 +169,10 @@
                                     name="dono-nome"
                                     id="dono-nome"
                                     required
+                                    minlength="2"
+                                    maxlength="50"
                                 />
+                                <p id="dono-nome-erro" class="form-error"></p>
                                 <br />
 
                                 <label for="dono-email">Email: </label>
@@ -178,7 +181,10 @@
                                     name="dono-email"
                                     id="dono-email"
                                     required
+                                    minlength="5"
+                                    maxlength="50"
                                 />
+                                <p id="dono-email-erro" class="form-error"></p>
                                 <br />
 
                                 <label for="dono-telefone">Telefone: </label>
@@ -199,7 +205,13 @@
                                     name="digimon-nome"
                                     id="digimon-nome"
                                     required
+                                    minlength="4"
+                                    maxlength="50"
                                 />
+                                <p
+                                    id="digimon-nome-erro"
+                                    class="form-error"
+                                ></p>
                                 <br />
 
                                 <label for="digimon-nivel">Nível: </label>
@@ -265,6 +277,10 @@
                                     max="7"
                                     required
                                 />
+                                <p
+                                    id="estadia-dias-erro"
+                                    class="form-error"
+                                ></p>
                                 <br />
 
                                 <fieldset>

@@ -326,3 +326,12 @@ fieldset {
     width: fit-content;
     padding: 8px;
 }
+
+input {
+    font-size: 18px;
+}
+
+.form-error {
+    font-size: 16px;
+    color: red;
+}
