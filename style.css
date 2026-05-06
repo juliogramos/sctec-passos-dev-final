@@ -119,7 +119,12 @@ section {
 }
 
 .hero {
-    background-color: var(--bg-light);
+    background: HSL(211 86% 91%);
+    background: linear-gradient(
+        0deg,
+        rgba(212, 231, 252, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
     padding: 16px;
     margin-top: 16px;
     border-radius: var(--border-radius);
@@ -221,4 +226,60 @@ section {
     color: var(--primary);
     font-size: 24px;
     font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px;
+    aspect-ratio: 9 / 10;
+    background-color: var(--bg-dark);
+    border: 3px solid var(--border-muted);
+    border-top: 3px solid var(--highlight);
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.card > p,
+.card > a {
+    font-size: 16px;
+    max-width: 30ch;
+}
+
+.card-icon-container {
+    background-color: var(--bg-light);
+    padding: 16px;
+    border: 2px solid var(--border-muted);
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.card-cta {
+    display: block;
+    background-color: var(--primary);
+    padding: 16px 32px;
+    border-radius: var(--border-radius);
+    width: fit-content;
+    color: var(--highlight);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.card-cta:hover {
+    background-color: var(--border);
+    color: var(--highlight);
+    transition: all 0.3s ease-in-out;
 }
