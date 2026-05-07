@@ -358,13 +358,17 @@ span:has(input[type="radio"]) {
     max-width: none;
 }
 
+.footer > a {
+    color: var(--bg-light);
+}
+
 /* Responsividade */
 @media screen and (max-width: 768px) {
-    /* Seção Destaque */
-    .img-relativa {
-        opacity: 0.2;
-        top: 0px;
-        right: 0px;
+    /* Header */
+    .header-query {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
     /* Seção Sobre */
@@ -387,15 +391,27 @@ span:has(input[type="radio"]) {
     }
 }
 
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+    /* Seção Destaque */
+    .img-relativa {
+        opacity: 0.2;
+        top: 0px;
+        right: 0px;
+    }
+}
+
 @media screen and (max-width: 480px) {
     /* Header */
-    .header-query {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+    header > nav > ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     /* Seção Destaque */
+    .hero {
+        height: 100%;
+    }
+
     .img-relativa {
         display: none;
     }
