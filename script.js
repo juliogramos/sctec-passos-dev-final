@@ -36,18 +36,17 @@ function displayConsent(shouldDisplay) {
     );
 
     if (shouldDisplay) {
-        consentContainer.removeAttribute("hidden");
+        consentContainer.style.display = "flex";
         consentCheck.removeAttribute("disabled");
     } else {
-        consentContainer.setAttribute("hidden", true);
+        consentContainer.style.display = "none";
         consentCheck.setAttribute("disabled", true);
     }
 }
 
 // Caso a página for recarregada e o "sim batalhar" esteja selecionado, o consentimento não vai aparecer
 // Isso faz essa checagem e mostra ele corretamente
-if (document.getElementById("estadia-batalhar-sim").checked)
-    displayConsent(true);
+displayConsent(document.getElementById("estadia-batalhar-sim").checked);
 
 // Configurando submissão de formulário
 form.addEventListener("submit", async (event) => {
@@ -144,8 +143,6 @@ function checkInvalidOwnerNameLength(formData) {
     } else {
         name = formData.get("dono-nome");
     }
-
-    console.log(name);
 
     if (name.length < 2 || name.length > 50) {
         errorDisplay.innerText = "Nome deve ter entre 2 e 50 caracteres";
