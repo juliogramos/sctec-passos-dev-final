@@ -36,16 +36,12 @@ function displayConsent(shouldDisplay) {
     );
 
     if (shouldDisplay) {
-        console.log("s");
         consentContainer.removeAttribute("hidden");
         consentCheck.removeAttribute("disabled");
     } else {
-        console.log("n");
         consentContainer.setAttribute("hidden", true);
         consentCheck.setAttribute("disabled", true);
     }
-
-    console.log("whuh");
 }
 
 // Caso a página for recarregada e o "sim batalhar" esteja selecionado, o consentimento não vai aparecer
@@ -54,7 +50,7 @@ if (document.getElementById("estadia-batalhar-sim").checked)
     displayConsent(true);
 
 // Configurando submissão de formulário
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     // Usando FormData ao invés de pegar todos os IDs pois achei interessante
@@ -74,7 +70,11 @@ form.addEventListener("submit", (event) => {
     // Checa se o usuário não deu consentimento mas deixou "batalhar" como sim
     if (checkConsentFailed(formData)) return;
 
-    alert("Formulário válido!");
+    // Simulando carregamento do envio
+    await loadFormSubmit(form);
+
+    // Formulário enviado com sucesso
+    formSubmitSuccess();
 });
 
 function checkFormNulls(formData) {
@@ -249,4 +249,25 @@ function checkConsentFailed(formData) {
         return true;
     }
     return false;
+}
+
+// Após o envio, fica carregando por 3 segundos
+function loadFormSubmit(form) {
+    const spinner = document.getElementById("spinner");
+    const mensagem = document.getElementById("mensagem-envio");
+
+    form.style.display = "none";
+    spinner.style.display = "block";
+    mensagem.innerText = "Enviando...";
+    return new Promise((resolve) => setTimeout(resolve, 3000));
+}
+
+function formSubmitSuccess() {
+    const spinner = document.getElementById("spinner");
+    const mensagem = document.getElementById("mensagem-envio");
+    const formResultImg = document.getElementById("form-result-img");
+
+    spinner.style.display = "none";
+    formResultImg.removeAttribute("hidden");
+    mensagem.innerText = "Enviado com sucesso! Entraremos em contato em breve.";
 }

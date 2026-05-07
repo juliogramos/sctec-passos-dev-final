@@ -159,185 +159,217 @@
                 <!-- Seção Contato -->
                 <section id="contato">
                     <h2>Contato</h2>
-                    <form id="contact-form">
-                        <div class="form-grid">
-                            <div class="form-column">
-                                <h3>Sobre Você</h3>
-                                <label for="dono-nome">Nome: </label>
-                                <input
-                                    type="text"
-                                    name="dono-nome"
-                                    id="dono-nome"
-                                    required
-                                    minlength="2"
-                                    maxlength="50"
-                                />
-                                <p id="dono-nome-erro" class="form-error"></p>
-                                <br />
-
-                                <label for="dono-email">Email: </label>
-                                <input
-                                    type="email"
-                                    name="dono-email"
-                                    id="dono-email"
-                                    required
-                                    minlength="5"
-                                    maxlength="50"
-                                />
-                                <p id="dono-email-erro" class="form-error"></p>
-                                <br />
-
-                                <label for="dono-telefone">Telefone: </label>
-                                <input
-                                    type="tel"
-                                    name="dono-telefone"
-                                    id="dono-telefone"
-                                    required
-                                />
-                                <br />
-                            </div>
-
-                            <div class="form-column">
-                                <h3>Seu Digimon</h3>
-                                <label for="digimon-nome">Nome: </label>
-                                <input
-                                    type="text"
-                                    name="digimon-nome"
-                                    id="digimon-nome"
-                                    required
-                                    minlength="4"
-                                    maxlength="50"
-                                />
-                                <p
-                                    id="digimon-nome-erro"
-                                    class="form-error"
-                                ></p>
-                                <br />
-
-                                <label for="digimon-nivel">Nível: </label>
-                                <select
-                                    name="digimon-nivel"
-                                    id="digimon-nivel"
-                                    required
-                                >
-                                    <option value="bebe">Bebê</option>
-                                    <option value="crianca">Criança</option>
-                                    <option value="adulto">Adulto</option>
-                                    <option value="perfeito">Perfeito</option>
-                                    <option value="final">Final</option>
-                                </select>
-                                <br />
-
-                                <label for="digimon-tipo">Tipo: </label>
-                                <select
-                                    name="digimon-tipo"
-                                    id="digimon-tipo"
-                                    required
-                                >
-                                    <option value="dado">Dado</option>
-                                    <option value="vacina">Vacina</option>
-                                    <option value="virus">Vírus</option>
-                                    <option value="livre">Livre</option>
-                                </select>
-                                <br />
-
-                                <fieldset>
-                                    <legend>Possui armadura?</legend>
+                    <div class="form-container">
+                        <form id="contact-form">
+                            <div class="form-grid">
+                                <div class="form-column">
+                                    <h3>Sobre Você</h3>
+                                    <label for="dono-nome">Nome: </label>
                                     <input
-                                        type="radio"
-                                        name="digimon-armadura"
-                                        id="digimon-armadura-sim"
-                                        value="sim"
+                                        type="text"
+                                        name="dono-nome"
+                                        id="dono-nome"
+                                        required
+                                        minlength="2"
+                                        maxlength="50"
                                     />
-                                    <label for="digimon-armadura-sim"
-                                        >Sim</label
-                                    >
+                                    <p
+                                        id="dono-nome-erro"
+                                        class="form-error"
+                                    ></p>
+                                    <br />
 
+                                    <label for="dono-email">Email: </label>
                                     <input
-                                        type="radio"
-                                        name="digimon-armadura"
-                                        id="digimon-armadura-nao"
-                                        value="nao"
-                                        checked
+                                        type="email"
+                                        name="dono-email"
+                                        id="dono-email"
+                                        required
+                                        minlength="5"
+                                        maxlength="50"
                                     />
-                                    <label for="digimon-armadura-nao"
-                                        >Não</label
-                                    >
-                                </fieldset>
-                            </div>
+                                    <p
+                                        id="dono-email-erro"
+                                        class="form-error"
+                                    ></p>
+                                    <br />
 
-                            <div class="form-column">
-                                <h3>Estadia</h3>
-                                <label for="estadia-dias">Quantos dias? </label>
-                                <input
-                                    type="number"
-                                    name="estadia-dias"
-                                    id="estadia-dias"
-                                    min="1"
-                                    max="7"
-                                    required
-                                />
-                                <p
-                                    id="estadia-dias-erro"
-                                    class="form-error"
-                                ></p>
-                                <br />
-
-                                <fieldset>
-                                    <legend>
-                                        Deseja que seu digimon batalhe com
-                                        outros clientes?
-                                    </legend>
+                                    <label for="dono-telefone"
+                                        >Telefone:
+                                    </label>
                                     <input
-                                        type="radio"
-                                        name="estadia-batalhar"
-                                        id="estadia-batalhar-sim"
-                                        value="sim"
+                                        type="tel"
+                                        name="dono-telefone"
+                                        id="dono-telefone"
+                                        required
                                     />
-                                    <label for="estadia-batalhar-sim"
-                                        >Sim</label
-                                    >
+                                    <br />
+                                </div>
 
+                                <div class="form-column">
+                                    <h3>Seu Digimon</h3>
+                                    <label for="digimon-nome">Nome: </label>
                                     <input
-                                        type="radio"
-                                        name="estadia-batalhar"
-                                        id="estadia-batalhar-nao"
-                                        value="nao"
-                                        checked
+                                        type="text"
+                                        name="digimon-nome"
+                                        id="digimon-nome"
+                                        required
+                                        minlength="4"
+                                        maxlength="50"
                                     />
-                                    <label for="estadia-batalhar-nao"
-                                        >Não</label
-                                    >
+                                    <p
+                                        id="digimon-nome-erro"
+                                        class="form-error"
+                                    ></p>
+                                    <br />
 
-                                    <div>
-                                        <span
-                                            id="consentimento-container"
-                                            hidden
+                                    <label for="digimon-nivel">Nível: </label>
+                                    <select
+                                        name="digimon-nivel"
+                                        id="digimon-nivel"
+                                        required
+                                    >
+                                        <option value="bebe">Bebê</option>
+                                        <option value="crianca">Criança</option>
+                                        <option value="adulto">Adulto</option>
+                                        <option value="perfeito">
+                                            Perfeito
+                                        </option>
+                                        <option value="final">Final</option>
+                                    </select>
+                                    <br />
+
+                                    <label for="digimon-tipo">Tipo: </label>
+                                    <select
+                                        name="digimon-tipo"
+                                        id="digimon-tipo"
+                                        required
+                                    >
+                                        <option value="dado">Dado</option>
+                                        <option value="vacina">Vacina</option>
+                                        <option value="virus">Vírus</option>
+                                        <option value="livre">Livre</option>
+                                    </select>
+                                    <br />
+
+                                    <fieldset>
+                                        <legend>Possui armadura?</legend>
+                                        <input
+                                            type="radio"
+                                            name="digimon-armadura"
+                                            id="digimon-armadura-sim"
+                                            value="sim"
+                                        />
+                                        <label for="digimon-armadura-sim"
+                                            >Sim</label
                                         >
-                                            <input
-                                                type="checkbox"
-                                                name="estadia-batalhar-consentimento"
-                                                id="estadia-batalhar-consentimento"
-                                                disabled
-                                            />
-                                            <label
-                                                for="estadia-batalhar-consentimento"
-                                                >Estou ciente e me
-                                                responsabilizo pelos
-                                                riscos</label
+
+                                        <input
+                                            type="radio"
+                                            name="digimon-armadura"
+                                            id="digimon-armadura-nao"
+                                            value="nao"
+                                            checked
+                                        />
+                                        <label for="digimon-armadura-nao"
+                                            >Não</label
+                                        >
+                                    </fieldset>
+                                </div>
+
+                                <div class="form-column">
+                                    <h3>Estadia</h3>
+                                    <label for="estadia-dias"
+                                        >Quantos dias?
+                                    </label>
+                                    <input
+                                        type="number"
+                                        name="estadia-dias"
+                                        id="estadia-dias"
+                                        min="1"
+                                        max="7"
+                                        required
+                                    />
+                                    <p
+                                        id="estadia-dias-erro"
+                                        class="form-error"
+                                    ></p>
+                                    <br />
+
+                                    <fieldset>
+                                        <legend>
+                                            Deseja que seu digimon batalhe com
+                                            outros clientes?
+                                        </legend>
+                                        <input
+                                            type="radio"
+                                            name="estadia-batalhar"
+                                            id="estadia-batalhar-sim"
+                                            value="sim"
+                                        />
+                                        <label for="estadia-batalhar-sim"
+                                            >Sim</label
+                                        >
+
+                                        <input
+                                            type="radio"
+                                            name="estadia-batalhar"
+                                            id="estadia-batalhar-nao"
+                                            value="nao"
+                                            checked
+                                        />
+                                        <label for="estadia-batalhar-nao"
+                                            >Não</label
+                                        >
+
+                                        <div>
+                                            <span
+                                                id="consentimento-container"
+                                                hidden
                                             >
-                                        </span>
-                                    </div>
-                                </fieldset>
+                                                <input
+                                                    type="checkbox"
+                                                    name="estadia-batalhar-consentimento"
+                                                    id="estadia-batalhar-consentimento"
+                                                    disabled
+                                                />
+                                                <label
+                                                    for="estadia-batalhar-consentimento"
+                                                    >Estou ciente e me
+                                                    responsabilizo pelos
+                                                    riscos</label
+                                                >
+                                            </span>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
+                            <button class="cta" type="submit">Enviar</button>
+                        </form>
+                        <div class="form-result">
+                            <img
+                                src="imagens/hakase_2.webp"
+                                alt=""
+                                aria-hidden="true"
+                                hidden
+                                id="form-result-img"
+                            />
+                            <i data-lucide="loader-circle" id="spinner"></i>
+                            <p id="mensagem-envio"></p>
                         </div>
-                        <button class="cta" type="submit">Enviar</button>
-                    </form>
+                    </div>
                 </section>
             </main>
 
             <!-- Rodapé -->
-            <footer></footer>
+            <footer class="footer">
+                <p>DigiPet &copy; 2026;</p>
+                <p>
+                    Digimon é propriedade da empresa Bandai. DigiPet é um
+                    projeto educacional e não lucra sobre essa propriedade
+                    intelectual.
+                </p>
+            </footer>
         </div>
         <!-- Script para os ícones Lucide -->
         <script src="https://unpkg.com/lucide@1.14.0/dist/umd/lucide.js"></script>
