@@ -6,15 +6,11 @@
     --bg: hsl(211 100% 96%);
     --bg-light: hsl(211 100% 100%);
     --text: hsl(220 100% 7%);
-    --text-muted: hsl(210 46% 29%);
     --highlight: hsl(211 100% 100%);
     --border: hsl(211 30% 52%);
     --border-muted: hsl(211 41% 64%);
     --primary: hsl(208 74% 28%);
-    --secondary: hsl(38 100% 17%);
     --danger: hsl(9 28% 41%);
-    --warning: hsl(51 36% 31%);
-    --success: hsl(149 30% 34%);
     --info: hsl(217 30% 42%);
 
     /* Medidas padrão */
@@ -328,7 +324,7 @@ span:has(input[type="radio"]) {
 
 .form-error {
     font-size: 16px;
-    color: red;
+    color: var(--danger);
 }
 
 #spinner {
