@@ -6,7 +6,7 @@ Elaborado por [Julio Gonçalves Ramos](https://www.linkedin.com/in/julio-ramos-1
 
 Link para o repositório: [https://github.com/juliogramos/sctec-passos-dev-final](https://github.com/juliogramos/sctec-passos-dev-final)
 
-Link para versão live do site: [https://juliogramos.github.io/sctec-passos-dev-final/](https://juliogramos.github.io/sctec-passos-dev-final/])
+Link para versão live do site: [https://juliogramos.github.io/sctec-passos-dev-final/](https://juliogramos.github.io/sctec-passos-dev-final/)
 
 ## Tecnologias
 
