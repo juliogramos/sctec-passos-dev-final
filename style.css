@@ -116,7 +116,7 @@
 }
 
 *:focus {
-    outline-offset: 8px;
+    outline-offset: var(--space-single);
     outline-color: var(--info);
 }
 
@@ -232,12 +232,8 @@ header > nav > ul > li > a:hover {
     border: 3px solid var(--border-muted);
     border-top: 3px solid var(--highlight);
     border-radius: var(--border-radius);
-}
-
-.sobre-bloco {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    width: 100%;
+    height: auto;
 }
 
 .credencial {
@@ -304,11 +300,30 @@ form > button {
 
 fieldset {
     width: fit-content;
-    padding: 8px;
+    padding: var(--space-single);
 }
 
 input {
     font-size: 18px;
+}
+
+span:has(input[type="radio"]) {
+    display: inline-flex;
+    flex-direction: row;
+    gap: var(--space-single);
+    margin-right: var(--space-single);
+}
+
+#consentimento-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 16px;
+    gap: var(--space-single);
+}
+
+#consentimento-container input {
+    width: fit-content;
 }
 
 .form-error {
@@ -335,7 +350,7 @@ input {
 
 /* Footer */
 .footer {
-    margin-top: 32px;
+    margin-top: var(--space-quadruple);
     background-color: var(--info);
     border-radius: var(--border-radius);
     padding: var(--space-double);
@@ -345,4 +360,57 @@ input {
     text-align: center;
     color: var(--highlight);
     max-width: none;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    /* Seção Destaque */
+    .img-relativa {
+        opacity: 0.2;
+        top: 0px;
+        right: 0px;
+    }
+
+    /* Seção Sobre */
+    .sobre-row {
+        flex-direction: column;
+    }
+
+    .sobre-row:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    /* Seção Serviços */
+    .servicos-query {
+        gap: var(--space-double);
+    }
+
+    /* Seção Contato */
+    input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header */
+    .header-query {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    /* Seção Destaque */
+    .img-relativa {
+        display: none;
+    }
+
+    /* Seção Contato */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-column:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
 }

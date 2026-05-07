@@ -84,4 +84,4 @@ A estrutura HTML básica foi expandida com os campos definidos no rascunho, se u
 
 #### 4.5 Refatoração CSS
 
-#### Responsividade
+#### 4.6 Responsividade

@@ -15,7 +15,7 @@
     <body>
         <div class="container flex column gap-double">
             <!-- Cabeçalho -->
-            <header class="flex row">
+            <header class="flex row header-query">
                 <div class="logotipo">DigiPet</div>
                 <nav>
                     <ul class="flex row gap-double border-default">
@@ -126,7 +126,9 @@
                 <!-- Seção Serviços -->
                 <section id="servicos" class="flex column gap-quadruple">
                     <h2>Serviços</h2>
-                    <div class="flex row gap-quadruple justify-center wrap">
+                    <div
+                        class="flex row gap-quadruple justify-center wrap servicos-query"
+                    >
                         <div
                             class="card flex column align-center gap-double border-default shadow-default"
                         >
@@ -274,26 +276,30 @@
 
                                     <fieldset>
                                         <legend>Possui armadura?</legend>
-                                        <input
-                                            type="radio"
-                                            name="digimon-armadura"
-                                            id="digimon-armadura-sim"
-                                            value="sim"
-                                        />
-                                        <label for="digimon-armadura-sim"
-                                            >Sim</label
-                                        >
+                                        <span>
+                                            <input
+                                                type="radio"
+                                                name="digimon-armadura"
+                                                id="digimon-armadura-sim"
+                                                value="sim"
+                                            />
+                                            <label for="digimon-armadura-sim"
+                                                >Sim</label
+                                            >
+                                        </span>
 
-                                        <input
-                                            type="radio"
-                                            name="digimon-armadura"
-                                            id="digimon-armadura-nao"
-                                            value="nao"
-                                            checked
-                                        />
-                                        <label for="digimon-armadura-nao"
-                                            >Não</label
-                                        >
+                                        <span>
+                                            <input
+                                                type="radio"
+                                                name="digimon-armadura"
+                                                id="digimon-armadura-nao"
+                                                value="nao"
+                                                checked
+                                            />
+                                            <label for="digimon-armadura-nao"
+                                                >Não</label
+                                            >
+                                        </span>
                                     </fieldset>
                                 </div>
 
@@ -321,26 +327,30 @@
                                             Deseja que seu digimon batalhe com
                                             outros clientes?
                                         </legend>
-                                        <input
-                                            type="radio"
-                                            name="estadia-batalhar"
-                                            id="estadia-batalhar-sim"
-                                            value="sim"
-                                        />
-                                        <label for="estadia-batalhar-sim"
-                                            >Sim</label
-                                        >
+                                        <span>
+                                            <input
+                                                type="radio"
+                                                name="estadia-batalhar"
+                                                id="estadia-batalhar-sim"
+                                                value="sim"
+                                            />
+                                            <label for="estadia-batalhar-sim"
+                                                >Sim</label
+                                            >
+                                        </span>
 
-                                        <input
-                                            type="radio"
-                                            name="estadia-batalhar"
-                                            id="estadia-batalhar-nao"
-                                            value="nao"
-                                            checked
-                                        />
-                                        <label for="estadia-batalhar-nao"
-                                            >Não</label
-                                        >
+                                        <span>
+                                            <input
+                                                type="radio"
+                                                name="estadia-batalhar"
+                                                id="estadia-batalhar-nao"
+                                                value="nao"
+                                                checked
+                                            />
+                                            <label for="estadia-batalhar-nao"
+                                                >Não</label
+                                            >
+                                        </span>
 
                                         <div>
                                             <span
@@ -383,7 +393,7 @@
 
             <!-- Rodapé -->
             <footer class="footer">
-                <p>DigiPet &copy; 2026;</p>
+                <p>DigiPet &copy; 2026</p>
                 <p>
                     Digimon é propriedade da empresa Bandai. DigiPet é um
                     projeto educacional e não lucra sobre essa propriedade
