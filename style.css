@@ -362,6 +362,7 @@ input {
 }
 
 .footer {
+    margin-top: 32px;
     background-color: var(--info);
     border-radius: var(--border-radius);
     padding: 16px;
