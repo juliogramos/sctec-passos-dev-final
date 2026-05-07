@@ -13,12 +13,12 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="container">
+        <div class="container flex column gap-double">
             <!-- Cabeçalho -->
-            <header>
+            <header class="flex row">
                 <div class="logotipo">DigiPet</div>
                 <nav>
-                    <ul>
+                    <ul class="flex row gap-double border-default">
                         <li><a href="#destaque">Inicio</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#servicos">Serviços</a></li>
@@ -28,10 +28,10 @@
             </header>
 
             <!-- Conteúdo -->
-            <main>
+            <main class="flex column gap-quadruple">
                 <!-- Seção Destaque -->
-                <section id="destaque">
-                    <div class="hero">
+                <section id="destaque" class="flex column gap-quadruple">
+                    <div class="hero flex column border-default shadow-default">
                         <h1>DigiPet - Seja sempre o melhor!</h1>
                         <p>
                             Nosso pet shop especializado em Digimon tem tudo
@@ -40,7 +40,9 @@
                             qualificado oferece diversos serviços e produtos
                             para que você seja sempre o tamer #1!
                         </p>
-                        <a href="#" class="cta">Agende sua visita</a>
+                        <a href="#" class="cta shadow-default"
+                            >Agende sua visita</a
+                        >
                         <img
                             src="imagens/hakase.webp"
                             aria-hidden="true"
@@ -50,10 +52,13 @@
                 </section>
 
                 <!-- Seção Sobre -->
-                <section id="sobre">
+                <section
+                    id="sobre"
+                    class="flex column gap-quadruple flat-block"
+                >
                     <h2>Sobre Nós</h2>
-                    <div class="sobre-row">
-                        <div class="sobre-bloco">
+                    <div class="sobre-row flex row gap-quadruple align-center">
+                        <div class="flex column gap-triple">
                             <h3>Quem Somos</h3>
                             <p>
                                 Somos uma equipe de desenvolvedores de software
@@ -62,7 +67,9 @@
                                 Digimon desde que foram criados e liberados ao
                                 público.
                             </p>
-                            <div class="credencial">
+                            <div
+                                class="credencial border-default shadow-default"
+                            >
                                 <span>29</span> anos de experiência
                             </div>
                         </div>
@@ -71,8 +78,8 @@
                             alt="Uma foto do time da DigiPet"
                         />
                     </div>
-                    <div class="sobre-row">
-                        <div class="sobre-bloco">
+                    <div class="sobre-row flex row gap-quadruple align-center">
+                        <div class="flex column gap-triple">
                             <h3>Nosso Espaço</h3>
                             <p>
                                 Possuímos uma Digifarm que comporta até 100TB de
@@ -82,7 +89,9 @@
                                 alta qualidade e Digimon treinados para manter o
                                 seu pet em forma.
                             </p>
-                            <div class="credencial">
+                            <div
+                                class="credencial border-default shadow-default"
+                            >
                                 <span>+1300</span> pets atendidos
                             </div>
                         </div>
@@ -92,8 +101,8 @@
                         />
                     </div>
 
-                    <div class="sobre-row">
-                        <div class="sobre-bloco">
+                    <div class="sobre-row flex row gap-quadruple align-center">
+                        <div class="flex column gap-triple">
                             <h3>Nossa Missão</h3>
                             <p>
                                 Nossa missão é nos manter constantemente
@@ -101,7 +110,9 @@
                                 possamos sempre dar o melhor cuidado aos seus
                                 Digimon. Nossa dedicação é a sua satisfação!
                             </p>
-                            <div class="credencial">
+                            <div
+                                class="credencial border-default shadow-default"
+                            >
                                 <span>4.5 Estrelas</span> no Google
                             </div>
                         </div>
@@ -113,12 +124,14 @@
                 </section>
 
                 <!-- Seção Serviços -->
-                <section id="servicos">
+                <section id="servicos" class="flex column gap-quadruple">
                     <h2>Serviços</h2>
-                    <div class="cards-container">
-                        <div class="card">
+                    <div class="flex row gap-quadruple justify-center wrap">
+                        <div
+                            class="card flex column align-center gap-double border-default shadow-default"
+                        >
                             <h3>Adoção</h3>
-                            <div class="card-icon-container">
+                            <div class="card-icon-container shadow-default">
                                 <i data-lucide="egg" class="card-icon"></i>
                             </div>
                             <p>
@@ -126,12 +139,14 @@
                                 parceiro que melhor se encaixe com a sua
                                 personalidade e necessidades únicas.
                             </p>
-                            <a href="#" class="card-cta">Escolha um parceiro</a>
+                            <a href="#" class="cta">Escolha um parceiro</a>
                         </div>
 
-                        <div class="card">
+                        <div
+                            class="card flex column align-center gap-double border-default shadow-default"
+                        >
                             <h3>Treinamento</h3>
-                            <div class="card-icon-container">
+                            <div class="card-icon-container shadow-default">
                                 <i data-lucide="dumbbell" class="card-icon"></i>
                             </div>
                             <p>
@@ -139,12 +154,14 @@
                                 para todos os tipos de Digimon. Batalhe contra
                                 Digimon da equipe e também com outros clientes!
                             </p>
-                            <a href="#" class="card-cta">Planeje seu treino</a>
+                            <a href="#" class="cta">Planeje seu treino</a>
                         </div>
 
-                        <div class="card">
+                        <div
+                            class="card flex column align-center gap-double border-default shadow-default"
+                        >
                             <h3>Equipamentos</h3>
-                            <div class="card-icon-container">
+                            <div class="card-icon-container shadow-default">
                                 <i data-lucide="usb" class="card-icon"></i>
                             </div>
                             <p>
@@ -152,18 +169,20 @@
                                 expansões de memória, armaduras, itens para
                                 treino, mods e muito mais.
                             </p>
-                            <a href="#" class="card-cta">Equipe seu Digimon</a>
+                            <a href="#" class="cta">Equipe seu Digimon</a>
                         </div>
                     </div>
                 </section>
 
                 <!-- Seção Contato -->
-                <section id="contato">
+                <section id="contato" class="flex column gap-quadruple">
                     <h2>Contato</h2>
-                    <div class="form-container">
+                    <div
+                        class="flat-block flex column align-center gap-quadruple"
+                    >
                         <form id="contact-form">
-                            <div class="form-grid">
-                                <div class="form-column">
+                            <div class="form-grid gap-double">
+                                <div class="form-column flex column gap-single">
                                     <h3>Sobre Você</h3>
                                     <label for="dono-nome">Nome: </label>
                                     <input
@@ -207,7 +226,7 @@
                                     <br />
                                 </div>
 
-                                <div class="form-column">
+                                <div class="form-column flex column gap-single">
                                     <h3>Seu Digimon</h3>
                                     <label for="digimon-nome">Nome: </label>
                                     <input
@@ -278,7 +297,7 @@
                                     </fieldset>
                                 </div>
 
-                                <div class="form-column">
+                                <div class="form-column flex column gap-single">
                                     <h3>Estadia</h3>
                                     <label for="estadia-dias"
                                         >Quantos dias?
@@ -347,7 +366,7 @@
                             </div>
                             <button class="cta" type="submit">Enviar</button>
                         </form>
-                        <div class="form-result">
+                        <div class="flex column gap-double align-center">
                             <img
                                 src="imagens/hakase_2.webp"
                                 alt=""
